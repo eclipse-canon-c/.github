@@ -23,29 +23,3 @@ Papers, preprints, and their artifacts. The verification campaign behind Canon-C
 The project site: documentation, releases and how to get involved.
 
 `.github` and `.eclipsefdn` hold organisation configuration and are not user-facing.
-
-## What "verified" means here
-
-We do not say "formally verified" and stop. At the current release the base layer stands at:
-
-| | |
-|---|---|
-| Verification units | 19 headers, each verified against its dependencies |
-| Proof obligations | 42,109 goal instances, **97.7 % discharged automatically** (Alt-Ergo, Z3, CVC5) |
-| Residue | **396 distinct obligations**, every one pinned by name in CI and covered by a written discharge argument |
-| Written arguments | 17 (16 in force), each auditable per obligation in [`docs/deviations.md`](https://github.com/eclipse-canon-c/Canon-C/blob/master/docs/deviations.md) |
-| Gates | proved-goal count, zero refutations, exact residual count, by-name roll-call — a change in either direction fails the build |
-
-The residue is the honest part of the claim, and it is the part we publish.
-
-## Getting started
-
-```c
-#include "canon.h"      // everything — or pick headers: core/arena.h, data/vec.h, ...
-```
-
-No build step, no dependencies. `-Wall -Wextra -Wpedantic -Werror` clean on GCC, Clang, MSVC and MinGW; tested under ASan/UBSan, Valgrind and fuzzing; builds with CompCert.
-
-- **Read:** the [Canon-C README](https://github.com/eclipse-canon-c/Canon-C#readme), then [`docs/deviations.md`](https://github.com/eclipse-canon-c/Canon-C/blob/master/docs/deviations.md) if you want to see what is not proved and why
-- **Ask:** [GitHub Discussions](https://github.com/eclipse-canon-c/Canon-C/discussions) · [canon-c-dev@eclipse.org](https://accounts.eclipse.org/mailing-list/canon-c-dev)
-- **Contribute:** contract changes are the most valuable kind — a contract that lets WP prove something the record currently argues is a change we will ratchet and credit. See [CONTRIBUTING.md](https://github.com/eclipse-canon-c/Canon-C/blob/master/CONTRIBUTING.md). Contributions follow the Eclipse Development Process.

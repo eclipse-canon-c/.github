@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/eclipse-canon-c/.github/main/profile/canon-c-components.svg" alt="Eclipse Canon-C project components" width="920">
+  <img src="https://raw.githubusercontent.com/eclipse-canon-c/.github/main/profile/canon-c-components.svg?v=2" alt="Eclipse Canon-C project components" width="920">
 </p>
 
 # Eclipse Canon-C Project
